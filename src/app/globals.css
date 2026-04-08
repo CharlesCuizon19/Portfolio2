@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
+@theme inline {
+  --color-primary: #64748b;
+  --color-secondary: #94a684;
+  --color-accent-sage: #a3b18a;
+  --color-accent-slate: #475569;
+  --color-accent-leaf: #84a98c;
+  --color-bg-light: #f1f5f9;
+  --color-bg-dark: #12181b;
+  --color-surface-dark: #1e2428;
+  --font-sans: var(--font-dm-sans), sans-serif;
+  --font-display: var(--font-syne), sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Glass card */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  /* Material icons */
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
+  /* Hover lift */
+  .hover-lift {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-6px);
+  }
+
+  /* Hero glow gradient */
+  .hero-glow {
+    background: linear-gradient(135deg, #64748b, #94a684, #475569);
+  }
+
+  /* Nav link base */
+  .nav-link {
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.25s ease;
+  }
+
+  /* Animated underline */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 100%;
+    height: 2px;
+    border-radius: 9999px;
+    background: #94a684;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+  .nav-link.active {
+    color: #94a684;
+  }
+
+  /* Ripple on click */
+  .nav-link .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(148, 166, 132, 0.35);
+    transform: scale(0);
+    animation: ripple-out 0.55s ease-out forwards;
+    pointer-events: none;
+  }
+}
+
+@layer utilities {
+  @keyframes ripple-out {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+
+  @keyframes section-flash {
+    0% {
+      box-shadow: 0 0 0 0 rgba(148, 166, 132, 0);
+    }
+    30% {
+      box-shadow: 0 0 0 8px rgba(148, 166, 132, 0.18);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(148, 166, 132, 0);
+    }
+  }
+
+  .section-highlight {
+    animation: section-flash 0.8s ease-out;
+    border-radius: 1rem;
+  }
+}
