@@ -16,10 +16,16 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Charles Angelo B. Cuizon | Full Stack Web Developer",
+  title: "CABC. | Charles Angelo B. Cuizon - Full Stack Web Developer",
   description: "Portfolio of Charles Angelo B. Cuizon, a Full Stack Web Developer specializing in high-performance scalable web applications using React, Laravel, and MySQL.",
   keywords: ["Charles Angelo B. Cuizon", "Full Stack Developer", "Web Developer", "ReactJS", "Laravel", "PHP", "MySQL", "Frontend Developer", "Backend Developer", "Software Engineer", "Portfolio"],
-  authors: [{ name: "Charles Angelo B. Cuizon" }]
+  authors: [{ name: "Charles Angelo B. Cuizon" }],
+  openGraph: {
+    title: "Charles Angelo B. Cuizon | Full Stack Web Developer",
+    description: "Portfolio of Charles Angelo B. Cuizon, a Full Stack Web Developer specializing in high-performance scalable web applications using React, Laravel, and MySQL.",
+    type: "website",
+    siteName: "Charles Angelo Cuizon Portfolio"
+  }
 };
 
 export default function RootLayout({

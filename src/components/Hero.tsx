@@ -34,10 +34,11 @@ export default function Hero() {
           <div className="relative glass-card p-4 rounded-3xl overflow-hidden border border-white/5">
             <Image
               src="/img/Gemini_Generated_Image_ygpk5tygpk5tygpk.png"
-              alt="Work Desk"
+              alt="Charles Angelo Cuizon working on a Full Stack Web application"
               width={600}
               height={600}
               className="rounded-2xl w-full h-[600px] object-cover grayscale opacity-80 object-[0%_40%] group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
+              priority
               unoptimized
             />
             <div className="absolute bottom-8 left-8 right-8 glass-card p-6 rounded-2xl">
