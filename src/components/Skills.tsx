@@ -11,7 +11,7 @@ export default function Skills() {
             { tag: "javascript", title: "Frontend", items: ["ReactJS", "JavaScript", "TailwindCSS"], cls: "text-primary", gridSpan: "md:col-span-1 lg:col-span-2" },
             { tag: "dns", title: "Backend", items: ["PHP", "Laravel", "REST APIs"], cls: "text-secondary", gridSpan: "md:col-span-1 lg:col-span-2" },
             { tag: "database", title: "Database", items: ["MySQL", "Multi-Tenant"], cls: "text-accent-slate", gridSpan: "md:col-span-1 lg:col-span-2" },
-            { tag: "terminal", title: "DevOps & Deployment", items: ["Cloudways", "Server Mgmt", "Live Debugging"], cls: "text-secondary", gridSpan: "md:col-span-1 lg:col-span-2 lg:col-start-2" },
+            { tag: "terminal", title: "DevOps & Deployment", items: ["Cloudways", "Server Mgmt"], cls: "text-secondary", gridSpan: "md:col-span-1 lg:col-span-2 lg:col-start-2" },
             { tag: "architecture", title: "Architecture", items: ["BPMN", "Figma"], cls: "text-primary", gridSpan: "md:col-span-2 md:w-[calc(50%-1rem)] md:justify-self-center lg:w-full lg:col-span-2" }
           ].map((s, i) => (
             <div key={i} className={`p-8 rounded-3xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 shadow-sm hover-lift ${s.gridSpan}`}>

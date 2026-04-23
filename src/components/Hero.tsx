@@ -41,17 +41,17 @@ export default function Hero() {
               priority
               unoptimized
             />
-            <div className="absolute bottom-8 left-8 right-8 glass-card p-6 rounded-2xl">
+            {/* <div className="absolute bottom-8 left-8 right-8 glass-card p-6 rounded-2xl">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-[#4c776d]/70 flex items-center justify-center flex-shrink-0">
                   <span className="material-symbols-outlined text-white">verified</span>
                 </div>
                 <div>
-                  {/* <p className="text-xs uppercase tracking-widest text-slate-400 font-bold">Experience</p> */}
+                  <p className="text-xs uppercase tracking-widest text-slate-400 font-bold">Experience</p>
                   <p className="text-lg font-bold text-white">Full Stack Developer</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
